@@ -37,7 +37,7 @@ let classificao = (i) => {
     } else if (i < 40) {
         return 'com obesidade grau II.';
     } else {
-        return 'com obesidade grau III. Cuidado!'
+        return 'com obesidade grau III. Cuidado!';
     }
 }
 
