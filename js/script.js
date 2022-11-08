@@ -28,11 +28,17 @@ let imc = (a, p) => p / a**2;
 // classificao
 let classificao = (i) => {
     if (i < 18.5) {
-        return 'está abaixo do peso';
+        return 'abaixo do peso.';
     } else if (i < 25){
-        return 'está no peso ideal';
+        return 'com o peso ideal.';
+    } else if (i < 30) {
+        return 'levemente acima do peso.';
+    } else if (i < 35) {
+        return 'com obesidade grau I.';
+    } else if (i < 40) {
+        return 'com obesidade grau II.';
     } else {
-        return 'está acima do peso';
+        return 'com obesidade grau III. Cuidado!'
     }
 }
 
@@ -40,7 +46,7 @@ let classificao = (i) => {
 let retorno = window.document.getElementById('retorno');
 function msg(n, i, c) {
     if (liberdado) {
-        retorno.innerHTML = `<em>${n} seu IMC é ${i.toFixed(1)} e você ${c}</em>`;
+        retorno.innerHTML = `<em>${n} seu IMC é ${i.toFixed(1)} e você está ${c}</em>`;
     } else {
         window.alert('Verifique os dados e tente novamente');
     }
