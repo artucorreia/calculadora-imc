@@ -45,6 +45,3 @@ function msg(n, i, c) {
         window.alert('Verifique os dados e tente novamente');
     }
 }
-
-
-
