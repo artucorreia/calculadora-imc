@@ -14,16 +14,15 @@ btn.addEventListener('click', () => {
 // validacao
 let liberdado = false;
 function validacao(n, a, p) {
-    if (n == '' || a <= 0 || p <= 0) {
+    if (n == '' || a < 100 || p < 20 || p >= 700) {
         liberdado = false;
     } else {
         liberdado = true;
     }
-
 }
 
 // calculo imc
-let imc = (a, p) => p / a**2;
+let imc = (a, p) => p / (a/100)**2;
 
 // classificao
 let classificao = (i) => {
@@ -48,6 +47,6 @@ function msg(n, i, c) {
     if (liberdado) {
         retorno.innerHTML = `<em>${n} seu IMC é ${i.toFixed(1)} e você está ${c}</em>`;
     } else {
-        window.alert('Verifique os dados e tente novamente');
+        window.alert('Verifique os dados e tente novamente. OBS: altura(Cm), peso(Kg)');
     }
 }
