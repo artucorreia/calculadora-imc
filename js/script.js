@@ -14,7 +14,7 @@ btn.addEventListener('click', () => {
 // validacao
 let liberdado = false;
 function validacao(n, a, p) {
-    if ((n == '') || (a <= 0) || (p <= 0)) {
+    if (n == '' || a <= 0 || p <= 0) {
         liberdado = false;
     } else {
         liberdado = true;
@@ -29,7 +29,7 @@ let imc = (a, p) => p / a**2;
 let classificao = (i) => {
     if (i < 18.5) {
         return 'está abaixo do peso';
-    } else if (i < 24.9){
+    } else if (i < 25){
         return 'está no peso ideal';
     } else {
         return 'está acima do peso';
